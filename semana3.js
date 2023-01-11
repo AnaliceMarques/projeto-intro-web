@@ -7,6 +7,7 @@ const produto1 = {
   preco: 7.0,
   desconto: false,
   produtosComplementares: ["feijão", "macarrão", "farinha"],
+  imagem: "./media/Arroz-Parbolizado-Tipo1-Urbano.png",
 };
 
 //Produto 2 (objeto)
@@ -18,6 +19,7 @@ const produto2 = {
   preco: 3.0,
   desconto: false,
   produtosComplementares: ["sabão em barra", "sabão em pó", "esponja"],
+  imagem: "./media/Detergente-Neutro-Ype.png",
 };
 
 //Produto 3 (objeto)
@@ -29,6 +31,7 @@ const produto3 = {
   preco: 5.0,
   desconto: true,
   produtosComplementares: ["chocolate", "açúcar", "granulado"],
+  imagem: "./media/Leite-Condensado-Integral-Moça-Nestle-395g-300x300.png",
 };
 
 //Produto 4 (objeto)
