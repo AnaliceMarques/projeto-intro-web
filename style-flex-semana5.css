@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: helvetica, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  min-width: 300px;
+}
+
+header {
+  color: white;
+  background-color: rgb(20, 20, 94);
+  border-bottom: 0.188rem solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+}
+
+.logomarca {
+  justify-self: self-start;
+}
+
+main {
+  background-color: rgb(237, 237, 237);
+  padding-top: 0.8rem;
+  /* height: 86%; */
+}
+
+.pesquisa {
+  text-align: center;
+}
+
+.produto {
+  background-color: rgba(201, 196, 255, 0.845);
+  border: 0.188rem solid rgb(150, 150, 237);
+  border-radius: 0.625rem;
+  padding: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 50%;
+  /* min-width: 245px; */
+  display: flex;
+  align-items: center;
+  margin: 1% 25%;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.imagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 120px;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+/* Propiedades do link dos produtos */
+
+a:link {
+  text-decoration: none;
+  font-weight: bolder;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: rgb(77, 76, 76);
+}
+
+footer {
+  color: white;
+  background-color: rgb(20, 20, 94);
+  border-top: 0.188rem solid black;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-size: 0.75rem;
+  width: 100%;
+  height: 36px;
+}
+
+@media screen and (max-width: 800px) {
+  .produto {
+    flex-direction: column;
+    align-items: start;
+    /* width: 50%; */
+    gap: 0.5rem;
+    /* margin: 1% 23%; */
+  }
+}
+
+/* @media screen and (max-width: 450px) {
+  .produto {
+    flex-direction: column;
+    align-items: start;
+    width: 70%;
+    gap: 0.5rem;
+    margin: 1% 15%;
+  }
+} */
+
+@media screen and (max-width: 300px) {
+  .produto {
+    width: 70%;
+    margin: 1% 15%;
+  }
+  .imagem {
+    display: none;
+  }
+}
+
+/* @media screen and (max-height: 575px) {
+  .produto {
+    flex-direction: column;
+    align-items: start;
+    width: 40%;
+    gap: 0.5rem;
+    margin: 1% 30%;
+  }
+} */
