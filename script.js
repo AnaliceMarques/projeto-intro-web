@@ -265,6 +265,8 @@ console.log(verificaProdutosNaLista(listaDeProdutos, "feijão");)
 */
 
 //Semana 6
+//Manipulação com DOM
+console.log("Manipulação com DOM - Semana 6");
 
 //Produtos disponíveis
 //Arroz
@@ -371,7 +373,7 @@ const leiteCondensado1 = {
   nome: "Leite Condensado Integral Moça",
   embalagem: "395 g",
   marca: "Nestle",
-  preco: 6.5,
+  preco: 6.89,
   desconto: true,
   produtosComplementares: ["Chocolate", "Açúcar", "Granulado"],
   imagem: "./img/Leite-Condensado-Integral-Moca-Nestle-395g.png",
@@ -432,7 +434,7 @@ const leiteUht1 = {
   nome: "Leite UHT Integral Camponesa",
   embalagem: "1 l",
   marca: "Embaré",
-  preco: 6.5,
+  preco: 6.49,
   desconto: true,
   produtosComplementares: ["Leite em pó", "Creme de leite", "Achocolatado"],
   imagem: "./img/Leite-Integral-Camponesa-Embare-1l.png",
@@ -507,7 +509,7 @@ const manteiga1 = {
   marca: "Embaré",
   preco: 31.98,
   desconto: false,
-  produtosComplementares: ["Margarina", "Oleo", "Leite"],
+  produtosComplementares: ["Margarina", "Óleo", "Leite"],
   imagem: "./img/Manteiga-Com-Sal-Camponesa-Embare-500g.png",
   link: "https://pt.wikipedia.org/wiki/Manteiga",
 };
@@ -519,7 +521,7 @@ const manteiga2 = {
   marca: "Piracanjuba",
   preco: 32.39,
   desconto: false,
-  produtosComplementares: ["Margarina", "Oleo", "Leite"],
+  produtosComplementares: ["Margarina", "Óleo", "Leite"],
   imagem: "./img/Manteiga-Com-Sal-Pirancajuba-500g.png",
   link: "https://pt.wikipedia.org/wiki/Manteiga",
 };
@@ -530,7 +532,7 @@ const manteiga3 = {
   marca: "Embaré",
   preco: 32.19,
   desconto: false,
-  produtosComplementares: ["Margarina", "Oleo", "Leite"],
+  produtosComplementares: ["Margarina", "Óleo", "Leite"],
   imagem: "./img/Manteiga-Sem-Sal-Camponesa-Embare-500g.png",
   link: "https://pt.wikipedia.org/wiki/Manteiga",
 };
@@ -542,7 +544,7 @@ const manteiga4 = {
   marca: "Piracanjuba",
   preco: 34.39,
   desconto: false,
-  produtosComplementares: ["Margarina", "Oleo", "Leite"],
+  produtosComplementares: ["Margarina", "Óleo", "Leite"],
   imagem: "./img/Manteiga-Sem-Sal-Piracanjuba-500g.png",
   link: "https://pt.wikipedia.org/wiki/Manteiga",
 };
@@ -554,7 +556,7 @@ const manteiga5 = {
   marca: "Embaré",
   preco: 14.99,
   desconto: false,
-  produtosComplementares: ["Margarina", "Oleo", "Leite"],
+  produtosComplementares: ["Margarina", "Óleo", "Leite"],
   imagem: "./img/Manteiga-Com-Sal-Camponesa-Embare-200g.png",
   link: "https://pt.wikipedia.org/wiki/Manteiga",
 };
@@ -566,7 +568,7 @@ const manteiga6 = {
   marca: "Piracanjuba",
   preco: 10.99,
   desconto: true,
-  produtosComplementares: ["Margarina", "Oleo", "Leite"],
+  produtosComplementares: ["Margarina", "Óleo", "Leite"],
   imagem: "./img/Manteiga-Com-Sal-Piracanjuba-200g.png",
   link: "https://pt.wikipedia.org/wiki/Manteiga",
 };
@@ -577,7 +579,7 @@ const manteiga7 = {
   marca: "Embaré",
   preco: 15.69,
   desconto: false,
-  produtosComplementares: ["Margarina", "Oleo", "Leite"],
+  produtosComplementares: ["Margarina", "Óleo", "Leite"],
   imagem: "./img/Manteiga-Sem-Sal-Camponesa-Embare-200g.png",
   link: "https://pt.wikipedia.org/wiki/Manteiga",
 };
@@ -589,7 +591,7 @@ const manteiga8 = {
   marca: "Piracanjuba",
   preco: 16.5,
   desconto: false,
-  produtosComplementares: ["Margarina", "Oleo", "Leite"],
+  produtosComplementares: ["Margarina", "Óleo", "Leite"],
   imagem: "./img/Manteiga-Sem-Sal-Piracanjuba-200g.png",
   link: "https://pt.wikipedia.org/wiki/Manteiga",
 };
@@ -625,22 +627,37 @@ const produtosDisponiveis = [
   manteiga8,
 ];
 
-// Lista com os produtos que estão com desconto no site
-const ofertasDaSemana = [];
-for (let item of produtosDisponiveis) {
-  if (item.desconto) {
-    ofertasDaSemana.push(item);
+console.log("Produtos disponíveis no estoque: ");
+console.log(produtosDisponiveis);
+console.log(`\n`);
+
+//Função para calcular a média dos preços
+const calcMedia = (lista) => {
+  let soma = 0;
+  for (let i in lista) {
+    soma += lista[i].preco;
   }
-}
+  let med = soma / lista.length;
+  return med;
+};
+
+//Função para verificar os produtos que estão com desconto
+const verificaOfertas = (lista) => {
+  const ofertas = [];
+  for (let item of lista) {
+    if (item.desconto) {
+      ofertas.push(item);
+    }
+  }
+  return ofertas;
+};
+
 console.log(`Lista de produtos com desconto:`);
-console.log(ofertasDaSemana);
+console.log(verificaOfertas(produtosDisponiveis));
 console.log(`\n`);
 
 //Lista com os produtos mais pesquisados pelos usuários
 const produtosMaisPesquisados = [leiteCondensado1, detergente1, arroz1];
-
-//Manipulação com DOM
-console.log("Manipulação com DOM");
 
 const lista = document.querySelector(".lista-de-produtos");
 
@@ -655,10 +672,11 @@ quantidadeResultados.setAttribute("class", "info");
 lista.insertAdjacentElement("beforebegin", quantidadeResultados);
 
 //Home
-adicionarLista(ofertasDaSemana);
 titulo.innerHTML = "Confira as Ofertas da Semana";
 quantidadeResultados.innerHTML = "";
+adicionarLista(verificaOfertas(produtosDisponiveis));
 
+//Função para voltar a tela inicial com o click do ícone Home
 function home() {
   lista.innerHTML = "";
   adicionarLista(ofertasDaSemana);
@@ -703,6 +721,14 @@ const verificaProduto = () => {
           listaComProdutosDesejados
         ).toFixed(2)}`
       );
+      console.log(
+        `Produtos encontrados com desconto: ${
+          verificaOfertas(listaComProdutosDesejados).length
+        }`
+      );
+      if (verificaOfertas(listaComProdutosDesejados).length !== 0) {
+        console.log(verificaOfertas(listaComProdutosDesejados));
+      }
     } else {
       titulo.innerHTML = `Não foram encontrados resultados para "${inputPesquisa.value}"`;
       quantidadeResultados.innerHTML = "";
@@ -758,13 +784,3 @@ function adicionarLista(listaDesejada) {
     lista.appendChild(containerSection);
   }
 }
-
-//Função para calcular a média dos preços
-const calcMedia = (lista) => {
-  let soma = 0;
-  for (let i in lista) {
-    soma += lista[i].preco;
-  }
-  let med = soma / lista.length;
-  return med;
-};
