@@ -473,7 +473,7 @@ const leiteUht4 = {
   preco: 6.99,
   desconto: false,
   produtosComplementares: ["Leite em pó", "Creme de leite", "Achocolatado"],
-  imagem: "./img/Leite-semidesnatado-Piracanjuba-1l.png",
+  imagem: "./img/Leite-Semidesnatado-Piracanjuba-1l.png",
   link: "https://pt.wikipedia.org/wiki/Leite",
 };
 
