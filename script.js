@@ -473,7 +473,7 @@ const leiteUht4 = {
   preco: 6.99,
   desconto: false,
   produtosComplementares: ["Leite em pó", "Creme de leite", "Achocolatado"],
-  imagem: "./img/Leite-semidesnatado-Piracanjuba-1l.png",
+  imagem: "./img/Leite-Semidesnatado-Piracanjuba-1l.png",
   link: "https://pt.wikipedia.org/wiki/Leite",
 };
 
@@ -680,9 +680,9 @@ adicionarLista(verificaOfertas(produtosDisponiveis));
 //Função para voltar a tela inicial com o click do ícone Home
 function home() {
   lista.innerHTML = "";
-  adicionarLista(verificaOfertas(produtosDisponiveis));
   titulo.innerHTML = "Confira as Ofertas da Semana";
   quantidadeResultados.innerHTML = "";
+  adicionarLista(verificaOfertas(produtosDisponiveis));
 }
 
 // A pesquisa pode ser realizada quando o botão for clicado ou quando a tecla Enter for pressionada. O evento para o botão está no html como onclick.
