@@ -265,7 +265,7 @@ console.log(verificaProdutosNaLista(listaDeProdutos, "feijão");)
 */
 
 //Semana 6
-//Manipulação com DOM
+
 console.log("Manipulação com DOM - Semana 6");
 
 //Produtos disponíveis
@@ -659,6 +659,7 @@ console.log(`\n`);
 //Lista com os produtos mais pesquisados pelos usuários
 const produtosMaisPesquisados = [leiteCondensado1, detergente1, arroz1];
 
+//Manipulação com o DOM
 const lista = document.querySelector(".lista-de-produtos");
 
 const inputPesquisa = document.getElementById("produto");
@@ -679,7 +680,7 @@ adicionarLista(verificaOfertas(produtosDisponiveis));
 //Função para voltar a tela inicial com o click do ícone Home
 function home() {
   lista.innerHTML = "";
-  adicionarLista(ofertasDaSemana);
+  adicionarLista(verificaOfertas(produtosDisponiveis));
   titulo.innerHTML = "Confira as Ofertas da Semana";
   quantidadeResultados.innerHTML = "";
 }
