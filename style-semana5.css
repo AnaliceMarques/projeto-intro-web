@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: helvetica, sans-serif;
+  min-width: 300px;
+  min-height: 649px;
+}
+
+/* Estilização dos itens do Header */
+header {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  background: linear-gradient(rgb(5, 1, 41), rgb(20, 20, 94));
+  border-bottom: 0.063rem solid rgb(5, 1, 41);
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  justify-items: end;
+  align-items: center;
+  padding-right: 1rem;
+  width: 100%;
+  height: 3.5rem;
+}
+
+h1 {
+  grid-column: 2;
+  justify-self: center;
+}
+
+.home {
+  cursor: pointer;
+}
+
+/*Estilização dos itens da Main*/
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background-color: rgb(237, 237, 237);
+  padding-top: 0.8rem;
+  width: 100%;
+  flex-grow: 1;
+}
+
+/*Estilização da barra e botão de pesquisa*/
+.pesquisa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 240px;
+  width: 20rem;
+}
+
+.barra-de-pesquisa {
+  display: flex;
+  justify-content: center;
+  padding-left: 0.5rem;
+  padding-right: 0.25rem;
+  border: 0.125rem solid rgb(105, 105, 201);
+  background-color: white;
+  width: 15rem;
+  height: 1.75rem;
+  border-radius: 0.75rem;
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 12.5rem;
+}
+
+.botao {
+  border: none;
+  border-radius: 0.75rem;
+  width: 4.75rem;
+  height: 1.75rem;
+  background-color: rgb(105, 105, 201);
+  color: white;
+}
+
+.botao:active {
+  color: rgb(105, 105, 201);
+  background-color: white;
+  border: 0.125rem solid rgb(105, 105, 201);
+}
+
+/*Estilização do Footer*/
+footer {
+  color: white;
+  background-color: rgb(20, 20, 94);
+  border-top: 0.063rem solid rgb(5, 1, 41);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-size: 0.75rem;
+  width: 100%;
+  height: 3.25rem;
+}
+
+.github {
+  display: flex;
+  align-items: center;
+}
+
+.github > img {
+  padding-right: 0.25rem;
+  height: 0.85rem;
+}
+
+.github > a:link {
+  text-decoration: none;
+  color: white;
+}
+
+.github > a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+/*Estilização dos itens manipulados pelo DOM*/
+.titulo {
+  color: rgb(105, 105, 201);
+  margin-top: 1%;
+  width: 44%;
+}
+
+.info {
+  color: gray;
+  width: 44%;
+}
+
+.lista-de-produtos {
+  width: 100%;
+}
+
+.produto {
+  background-color: rgba(201, 196, 255, 0.845);
+  border: 0.125rem solid rgb(150, 150, 237);
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  font-family: Helvetica, sans-serif;
+  width: 44%;
+  min-width: 160px;
+  display: flex;
+  align-items: center;
+  margin: 1% 28%;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.imagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7.75rem;
+  height: 7.75rem;
+  min-width: 124px;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.link:link {
+  text-decoration: none;
+  font-weight: bolder;
+  color: gray;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:visited {
+  color: black;
+}
+
+/* Responsividade com Media-queries*/
+@media screen and (max-width: 800px) {
+  .produto {
+    flex-direction: column;
+    align-items: start;
+    width: 64%;
+    gap: 0.5rem;
+    margin: 1% 18%;
+  }
+  .titulo {
+    width: 64%;
+    margin: 1% 18%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .produto {
+    width: 80%;
+    margin: 1% 10%;
+  }
+  .imagem {
+    display: none;
+  }
+  .titulo {
+    width: 80%;
+    margin: 1% 10%;
+  }
+
+  .pesquisa {
+    align-self: start;
+    width: 18.75rem;
+  }
+
+  .barra-de-pesquisa {
+    width: 13.75rem;
+  }
+}
